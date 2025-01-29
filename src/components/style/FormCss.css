@@ -1,0 +1,76 @@
+/* TodoForm.css */
+.todo-form-container {
+  background-color: #ffffff; /* White background for clean contrast */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: 30px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000000; /* Ensure the text is black */
+}
+
+input[type="text"], textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  color: #000000; /* Set input text color to black */
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #4CAF50; /* Green border when focused */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+  background-color: #45a049;
+}
+
+button.submit-button:active {
+  background-color: #388e3c; /* Darker green when clicked */
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+/* Add CSS for status text color */
+.todo-form .form-group span {
+  font-size: 16px;
+  color: #000000; /* Ensures the status text is black */
+}
