@@ -33,8 +33,8 @@ const TodoApp = () => {
   };
 
   // Function to remove a todo by index
-  const removeTodo = (index) => {
-    setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
+  const removeTodo = (id) => {
+    setTodos((prevTodos) => prevTodos.filter((_, i) => i !== id));
   };
 
   // Function to handle search
