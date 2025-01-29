@@ -9,7 +9,7 @@ const TodoItem = ({ todo, index, removeTodo }) => {
         {completed ? 'Finished' : 'Not Finished'}
       </span>
       <button
-        onClick={() => removeTodo(index)}  // Use index instead of id
+        onClick={() => removeTodo(id)}  // Use index instead of id
         className="bg-red-500 text-white px-4 py-2 mt-2 rounded"
       >
         Delete
