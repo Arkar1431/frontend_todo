@@ -9,11 +9,12 @@ const TodoItem = ({ todo, removeTodo }) => {
         {completed ? 'Finished' : 'Not Finished'}
       </span>
       <button
-        onClick={() => removeTodo(id)}
+        onClick={() => removeTodo(todo.id)}
         className="bg-red-500 text-white px-4 py-2 mt-2 rounded"
       >
         Delete
       </button>
+
     </div>
   );
 };

@@ -33,8 +33,21 @@ const TodoApp = () => {
   };
 
   // Function to remove a todo by index
-  const removeTodo = (id) => {
-    setTodos((prevTodos) => prevTodos.filter((_, i) => i !== id));
+  const removeTodo = async (id) => {
+    try {
+      const response = await fetch(`/api/todos/${id}`, {
+        method: "DELETE",
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to delete todo");
+      }
+  
+      setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+    } catch (error) {
+      console.error("Error deleting todo:", error);
+      alert("Error deleting todo. Please check your backend.");
+    }
   };
 
   // Function to handle search
